@@ -1,4 +1,3 @@
-version: '3'
 services:
   bike-library-api:
     build: .
@@ -20,7 +19,7 @@ services:
     container_name: sqlite-db
     volumes:
       - sqlite-data:/usr/src/app/db
-    command: ['tail', '-f', '/dev/null']
+    command: /bin/sh -c "while true; do sleep 1000; done"
 
 volumes:
   sqlite-data:

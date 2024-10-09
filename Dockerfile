@@ -8,6 +8,10 @@ RUN npm install
 
 COPY . .
 
+RUN npm i -g @nestjs/cli
+
+RUN npm run build
+
 EXPOSE 8080
 
-CMD ["npm", "run", "start:dev"]
+CMD ["npm", "run", "start:prod"]
