@@ -57,3 +57,17 @@ npm run start:dev
 ```bash
 docker compose up
 ```
+
+## Screenshots
+
+1. POST /bikes
+   ![POST /bikes](images/post-bikes.png)
+
+2. GET /bikes
+   ![GET /bikes](images/get-bikes.png)
+
+3. PUT /bikes/:bikeId
+   ![PUT /bikes/:bikeId](images/put-bikes.png)
+
+4. DELETE /bikes/:bikeId
+   ![DELETE /bikes/:bikeId](images/del-bikes.png)
