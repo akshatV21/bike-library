@@ -19,12 +19,13 @@ This project is a simple Bike Library REST API built using [Nest.js](https://nes
 
 ## API Endpoints
 
-| Method | Endpoint      | Description                        |
-| ------ | ------------- | ---------------------------------- |
-| GET    | `/bikes`      | Fetch a list of all bikes          |
-| POST   | `/bikes`      | Add a new bike to the library      |
-| PUT    | `/bikes/{id}` | Update details of an existing bike |
-| DELETE | `/bikes/{id}` | Delete a bike from the library     |
+| Method | Endpoint          | Description                        |
+| ------ | ----------------- | ---------------------------------- |
+| GET    | `/api`            | Open the Swagger API Document      |
+| GET    | `/api/bikes`      | Fetch a list of all bikes          |
+| POST   | `/api/bikes`      | Add a new bike to the library      |
+| PUT    | `/api/bikes/{id}` | Update details of an existing bike |
+| DELETE | `/api/bikes/{id}` | Delete a bike from the library     |
 
 ## Setup and Installation
 
