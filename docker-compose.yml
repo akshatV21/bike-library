@@ -1,0 +1,27 @@
+version: '3'
+services:
+  bike-library-api:
+    build: .
+    container_name: bike-library-api
+    ports:
+      - '8080:8080' # Map port 8080 on the host to port 3000 in the container
+    environment:
+      - PORT=8080
+      - DATABASE_URL="sqlite://db/bikes.db"
+    volumes:
+      - .:/usr/src/app # Mount the current directory inside the container
+      - sqlite-data:/usr/src/app/db # Persistent volume for SQLite database
+    command: npm run start:dev
+    depends_on:
+      - sqlite
+
+  sqlite:
+    image: nouchka/sqlite3
+    container_name: sqlite-db
+    volumes:
+      - sqlite-data:/usr/src/app/db
+    command: ['tail', '-f', '/dev/null']
+
+volumes:
+  sqlite-data:
+    driver: local
