@@ -9,6 +9,7 @@ RUN npm install
 COPY . .
 
 RUN npm i -g @nestjs/cli
+RUN npm i -g typescript
 
 RUN npm run build
 
